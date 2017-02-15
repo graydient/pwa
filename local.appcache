@@ -1,0 +1,30 @@
+CACHE MANIFEST
+# 2016-09-78:v1
+
+CACHE:
+js/app.js
+js/carService.js
+js/clientStorage.js
+js/swRegister.js
+js/template.js
+resources/es6-promise.js
+resources/es6-promise.map
+resources/localforage/localforage.min.js
+resources/localforage/localforage-getitems.js
+resources/localforage/localforage-setitems.js
+resources/material-design-lite/material.min.js
+resources/material-design-lite/material.min.js.map
+resources/material-design-lite/material.red-indigo.min.css
+resources/system.js
+resources/system.js.map
+
+./
+index.html
+
+# Resources that require the user to be online.
+NETWORK:
+*
+
+FALLBACK:
+# Offline site here
+# / /offline-site.html
