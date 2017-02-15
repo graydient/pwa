@@ -48,6 +48,10 @@
 					<button onclick="pageEvents.loadMore()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
 						Show more
 					</button>
+
+					<button id="showLess" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+						Show Less
+					</button>
 				</div>
 		</div>
 		<script id="car-card" type="text/template">
@@ -58,6 +62,10 @@
             </div>
         </div>
     </script>
+    	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
 		<script src="resources/es6-promise.js"></script>
 		<script src="resources/fetch.js"></script>
 		<script src="resources/system.js"></script>
@@ -66,6 +74,16 @@
     	<script src="resources/localforage/localforage-setitems.js"></script>
 		<script>
 			System.import('./js/app.js');
+		</script>
+
+		<script type="text/javascript">
+				x=3;
+			    $('#showLess').click(function () {
+			        x=(x-5<0) ? 3 : x-5;
+			        $('.mdl-card').not(':lt('+x+')').hide();
+			    });
+
+
 		</script>
 
 	</body>
