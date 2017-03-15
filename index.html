@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html manifest="local.appcache">
+<html >
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="pwa demo app">
-			<title>PWA DEMO</title>
+		<link rel="manifest" href="manifest.json">
+		<title>PWA DEMO</title>
 			<link rel="stylesheet" type="text/css" href="resources/material-design-lite/material.red-indigo.min.css">
 			<script src="resources/material-design-lite/material.min.js"></script>
+		
+<meta name="apple-mobile-web-app-title" content="My demo pwa">
+<meta name="application-name" content="My demo pwa">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
 		<style>
 			.center{text-align:center;padding:10px;}
 			.mdl-card{cursor: pointer;color:#ffffff;height: 250px;background-size: cover;}
@@ -49,9 +69,6 @@
 						Show more
 					</button>
 
-					<button id="showLess" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-						Show Less
-					</button>
 				</div>
 		</div>
 		<script id="car-card" type="text/template">

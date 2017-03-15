@@ -22,6 +22,7 @@ define(['template.js', './clientStorage.js'], function(template, clientStorage){
 				}).then(function(data){
 					clientStorage.addCars(data.cars)
 					.then(function(){
+						data.cars.forEach(preCacheDetailsPage);
 						resolve("The connection is OK, showing latest results");
 					});
 			}).catch(function(e){
@@ -35,6 +36,16 @@ define(['template.js', './clientStorage.js'], function(template, clientStorage){
 		clientStorage.getCars().then(function(cars){
 			template.appendCars(cars);
 		});
+	}
+	function preCacheDetailsPage(car){
+		if('serviceWorker' in navigator){
+			var carDetailsUrl = apiUrlCar + car.value.details_id;
+			window.caches.open('carDealsCachePagesV1').then(function(cache){
+				cache.match(carDetailsUrl).then(function(response){
+					if(!response) cache.add(new Request(carDetailsUrl));
+				})
+			})
+		}
 	}
 
 	 function loadCarPage(carId){
